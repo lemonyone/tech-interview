@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: petclinic
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: tech1.nks.msxpert.co.kr
+    http:
+      paths:               
+      - path: "/" 
+        pathType: Prefix
+        backend:          
+          service: 
+             name: petclinic
+             port: 
+               number: 80
