@@ -52,7 +52,7 @@ kind: Service
 metadata:
   name: petclinic
 spec:
-  #type: ClusterIP
+  type: ClusterIP
   selector:
     app: petclinic
   ports:
